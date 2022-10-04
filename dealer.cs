@@ -10,22 +10,27 @@ public class Main
 //main function
 
 
-static void Main(string[] args)
+public void mainline()
 {
     do
     {
         bool play_again = true;
-        float continue_game;
-        Console.WriteLine("The card is: "); // number to be displayed after card class is complete
-        Console.WriteLine("Higher or lower? [h/l] ");
-        Console.ReadLine();
-        Console.WriteLine("Next card was: "); // also needed from card class
-        Console.WriteLine("Your score is: "); // enter from score function
-        Console.WriteLine("Play again? [y/n] ");     
-        continue_game = Console.ReadLine();
+
+        while (play_again == true);
+        {
+
+            float continue_game;
+            Console.WriteLine("The card is: "); // number to be displayed after card class is complete
+            Console.WriteLine("Higher or lower? [h/l] ");
+            Console.ReadLine();
+            Console.WriteLine("Next card was: "); // also needed from card class
+            Console.WriteLine("Your score is: "); // enter from score function
+            Console.WriteLine("Play again? [y/n] ");     
+            continue_game = Console.ReadLine();
+        }
         
     }
-    while (play_again == true);
+    
     
 }
 
