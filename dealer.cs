@@ -16,7 +16,7 @@ public void mainline()
     {
         bool play_again = true;
 
-        while (play_again == true);
+        while (play_again)
         {
 
             float continue_game;
