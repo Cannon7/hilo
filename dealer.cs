@@ -19,14 +19,15 @@ public void mainline()
         while (play_again)
         {
 
-            float continue_game;
             Console.WriteLine("The card is: "); // number to be displayed after card class is complete
             Console.WriteLine("Higher or lower? [h/l] ");
             Console.ReadLine();
             Console.WriteLine("Next card was: "); // also needed from card class
             Console.WriteLine("Your score is: "); // enter from score function
             Console.WriteLine("Play again? [y/n] ");     
-            continue_game = Console.ReadLine();
+            bool continue_game = Console.ReadLine();
+            play_again = continue_game;
+            
         }
         
     }
