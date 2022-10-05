@@ -4,14 +4,19 @@ namespace Hilo
 {
     public class Points{
 
-        public int start()
+        public int answer_points(int set_points, string answer)
         {
-            int points = 300;
-            return points;
+            if (answer == "right")
+                {
+                    set_points = set_points + 100;
+                }
+            else {
+                set_points = set_points - 75;
+            }
+            
+            return set_points;
+        }   
 
-        }
-
-        
 
         
 
