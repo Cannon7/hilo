@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace Hilo
+namespace hilo
 {
     class Program{
 
         static void Main(string[] args)
         {
-            Dealer startgame = new.dealer();
-            startgame.playgame();
-
+            Dealer dealer = new Dealer();
+            dealer.play_game();
         }
     }
-        
+}

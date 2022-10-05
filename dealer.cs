@@ -2,25 +2,30 @@ using System;
 using System.Threading;
 
 
-namespace week3;
+namespace hilo;
 
-
+from cards import cards
 public class Dealer
 {
 //main function
 
 
-public void playgame() 
+public void play_game()
 {
 
     bool play_again = true;
     do
     {
-        
+        int score;
+        score = 300;
         Console.WriteLine("The card is: "); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         Console.ReadLine();
         Console.WriteLine("Next card was: "); // also needed from card class
+        if (score <= 0)
+        {
+            break;
+        }
         Console.WriteLine("Your score is: "); // enter from score function
         Console.WriteLine("Play again? [y/n] ");     
         string continue_game = Console.ReadLine();
