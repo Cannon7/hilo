@@ -25,8 +25,16 @@ public void mainline()
             Console.WriteLine("Next card was: "); // also needed from card class
             Console.WriteLine("Your score is: "); // enter from score function
             Console.WriteLine("Play again? [y/n] ");     
-            bool continue_game = Console.ReadLine();
-            play_again = continue_game;
+            string continue_game = Console.ReadLine();
+            if (continue_game == "y")
+            {
+                play_again = true;
+                }
+            else if (continue_game == "n")
+            {
+                play_again = false;
+            }
+            
             
         }
         
