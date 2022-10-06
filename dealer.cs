@@ -9,7 +9,7 @@ public class Dealer
 //main function
 
 
-public void play_game(int number)
+public void playgame()
 {
 
     bool play_again = true;
@@ -17,7 +17,7 @@ public void play_game(int number)
     {
         int score;
         score = 300;
-        Console.WriteLine("The card is: " + number); // number to be displayed after card class is complete
+        Console.WriteLine("The card is: "); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         Console.ReadLine();
         Console.WriteLine("Next card was: "); // also needed from card class
