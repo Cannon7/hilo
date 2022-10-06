@@ -12,12 +12,13 @@ public class Dealer
 
 public void playgame() 
 {
-
+    Card getcard = new Card();
     bool play_again = true;
     do
     {
+        int returned_num = getcard.draw_card();
         
-        Console.WriteLine("The card is: "); // number to be displayed after card class is complete
+        Console.WriteLine("The card is: " + returned_num); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         Console.ReadLine();
         Console.WriteLine("Next card was: "); // also needed from card class
