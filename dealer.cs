@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 
 
-namespace week3;
+namespace Hilo;
 
 
 public class Dealer
