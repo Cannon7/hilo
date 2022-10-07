@@ -8,10 +8,10 @@ namespace Hilo
         {
             if (answer == "right")
                 {
-                    set_points = set_points + 100;
+                    set_points += 100;
                 }
             else {
-                set_points = set_points - 75;
+                set_points -= 75;
             }
             
             return set_points;
