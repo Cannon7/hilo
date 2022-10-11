@@ -11,7 +11,7 @@ public class Dealer
 
 public void playgame()
 {
-    Points answer_points = new Points(); //brings card class from Points.cs
+    Points answer_points = new Points(); //brings points class from Points.cs
     Card getcard = new Card(); // Brings in Card class from cards.cs
     bool play_again = true;
     do
@@ -19,11 +19,13 @@ public void playgame()
         int player_card = getcard.draw_card();
         int vs_card = getcard.draw_card();
         int score = 300;
-        
+        string answer = "right";
+        int final = Points.answer_points(score, answer);
+
         Console.WriteLine("The card is: " + player_card); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         string guess = Console.ReadLine();
-        string answer = ""; // Currently will be used in line ~ 53 (which is commented out)
+        // Currently will be used in line ~ 53 (which is commented out)
         
         // <summary>
         // The following if statements will take the guess from the player and determine if their guess is 
@@ -48,15 +50,13 @@ public void playgame()
             Console.WriteLine("Sorry that input was not recognized. Please die slowly :)");
         }
 
-
-        
-        // Points.answer_points(score, answer); 
-        Console.WriteLine("Next card was: "); // also needed from card class
+        //something needs to go here but I am still figuring it out.
+        Console.WriteLine("Next card was: " + vs_card); // also needed from card class
         if (score <= 0)
         {
             break;
         }
-        Console.WriteLine("Your score is: "  ); // enter from score function
+        Console.WriteLine("Your score is: " + score); // enter from score function
         Console.WriteLine("Play again? [y/n] ");     
         string continue_game = Console.ReadLine();
             if (continue_game == "y")
