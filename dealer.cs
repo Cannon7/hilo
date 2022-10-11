@@ -61,16 +61,27 @@ public void playgame()
 
         //something needs to go here but I am still figuring it out.
         Console.WriteLine("Next card was: " + vs_card); // also needed from card class
-        if (score <= 1000)
+        if (score >= 1000)
         {
-            play_again = "false";
+            run_again();
+        }
+        else if (score <= 0)
+        {
+            run_again();
         }
         Console.WriteLine("Your score is: " + score); // enter from score function
-        Console.WriteLine("Play again? [y/n] ");     
-        string continue_game = Console.ReadLine();
-        if (continue_game == "n")
+        void run_again()
         {
-            play_again = "false";
+            Console.WriteLine("Play again? [y/n] ");     
+            string continue_game = Console.ReadLine();
+            if (continue_game == "n")
+            {
+                play_again = "false";
+            }
+            else if (continue_game == "y")
+            {
+                score = 300;
+            }
         }
                    
     }
