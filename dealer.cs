@@ -11,17 +11,15 @@ public class Dealer
 
 public void playgame()
 {
-    Points answer_points = new Points(); //brings points class from Points.cs
+    Points points = new Points(); //brings points class from Points.cs
     Card getcard = new Card(); // Brings in Card class from cards.cs
-    bool play_again = true;
-    do
+    int score = 300;
+    string play_again = "true";
+    while (play_again == "true")
     {
         int player_card = getcard.draw_card();
         int vs_card = getcard.draw_card();
-        int score = 300;
         string answer = "right";
-        int final = Points.answer_points(score, answer);
-
         Console.WriteLine("The card is: " + player_card); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         string guess = Console.ReadLine();
@@ -34,16 +32,28 @@ public void playgame()
         
         if (guess == "h") { 
             if (player_card > vs_card) 
-            { answer = "right";}
+            { 
+                answer = "right";
+                score = points.answer_points(score, answer);
+            }
             else 
-            { answer = "wrong";} 
+            { 
+                answer = "wrong";
+                score = points.answer_points(score, answer);
+            } 
         }
         
         else if (guess == "l") {
             if (player_card < vs_card)
-             { answer = "right";}
+            { 
+                answer = "right";
+                score = points.answer_points(score, answer);
+            }
             else 
-            {answer = "wrong";}
+            {
+                answer = "wrong";
+                score = points.answer_points(score, answer);
+            }
         }
         else {
             Console.WriteLine("Sorry that input was not recognized. Please die slowly :)");
@@ -51,23 +61,19 @@ public void playgame()
 
         //something needs to go here but I am still figuring it out.
         Console.WriteLine("Next card was: " + vs_card); // also needed from card class
-        if (score <= 0)
+        if (score <= 1000)
         {
-            break;
+            play_again = "false";
         }
         Console.WriteLine("Your score is: " + score); // enter from score function
         Console.WriteLine("Play again? [y/n] ");     
         string continue_game = Console.ReadLine();
-            if (continue_game == "y")
-            {
-                play_again = true;
-            }
-            else if (continue_game == "n")
-            {
-                play_again = false;
-            }
+        if (continue_game == "n")
+        {
+            play_again = "false";
+        }
                    
-    } while (play_again == true);
+    }
     
     
 }
