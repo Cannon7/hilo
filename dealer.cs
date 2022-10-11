@@ -25,7 +25,6 @@ public void playgame()
         Console.WriteLine("The card is: " + player_card); // number to be displayed after card class is complete
         Console.WriteLine("Higher or lower? [h/l] ");
         string guess = Console.ReadLine();
-        // Currently will be used in line ~ 53 (which is commented out)
         
         // <summary>
         // The following if statements will take the guess from the player and determine if their guess is 
